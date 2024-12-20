@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="size.css">
+</head>
+<body>
+    <!-- 视频背景 -->
+    <video autoplay muted loop id="background-video">
+        <source src="./video/红白说唱hiphop舞台背景素材 (30)_爱给网_aigei_com.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+
+    <!-- 登录表单 -->
+    <div class="login-container">
+        <form action="login.php" method="post">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password">
+            <input type="submit" value="登录">
+        </form>
+    </div>
+    <!-- 返回主页按钮 -->
+<div class="back-to-home">
+    <a href="Home.html" class="button-style">返回主页</a>
+</div>
+</body>
+</html>

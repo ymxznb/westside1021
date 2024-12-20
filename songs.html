@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌手查找</title>
+    <link rel="stylesheet" type="text/css" href="singer.css"> <!-- 链接外部CSS文件 -->
+</head>
+<body>
+    <!-- 视频背景 -->
+    <video autoplay muted loop id="background-video"> <!-- 自动播放、静音、循环播放的视频 -->
+        <source src="./video/红白说唱hiphop舞台背景素材 (30)_爱给网_aigei_com.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+
+    <!-- 查找表单 -->
+    <div class="search-container">
+        <input type="text" id="singer-search" placeholder="输入歌手名称..."> <!-- 输入框 -->
+        <button type="button">查找</button> <!-- 搜索按钮 -->
+    </div>
+       <!-- 歌手图片列表 -->
+    <div class="image-singer">
+        <!-- 歌手图片链接 -->
+        <a href="https://music.163.com/#/artist?id=1132392" class="image-container">
+            <img src="./image/mashiwei.png" alt="马思维">
+            <div class="overlay">马思维</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=865007" class="image-container">
+            <img src="./image/falao.jpeg" alt="法老">
+            <div class="overlay">法老</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=51957057" class="image-container">
+            <img src="./image/lijinze.png" alt="李京泽">
+            <div class="overlay">李京泽</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=13899303" class="image-container">
+            <img src="./image/yanghesu.jpg" alt="杨和苏">
+            <div class="overlay">杨和苏</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=4479" class="image-container">
+            <img src="./image/MC HotDog.jpeg" alt="MCHOTDOG">
+            <div class="overlay">MC HOTDOG</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=12127564" class="image-container">
+            <img src="./image/aifojieni.jfif" alt="艾佛杰尼">
+            <div class="overlay">艾佛杰尼</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=1211046" class="image-container">
+            <img src="./image/gai.jpg" alt="gai">
+            <div class="overlay">GAI</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=1203045" class="image-container">
+            <img src="./image/aire.jfif" alt="艾热">
+            <div class="overlay">艾热</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=4694" class="image-container">
+            <img src="./image/ouyangjing.png" alt="欧阳靖">
+            <div class="overlay">欧阳靖</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=1038099" class="image-container">
+            <img src="./image/VAVA.jpeg" alt="VAVA">
+            <div class="overlay">VAVA</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=12236125" class="image-container">
+            <img src="./image/wangyitai.png" alt="王以太">
+            <div class="overlay">王以太</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=13112601" class="image-container">
+            <img src="./image/zhangzihao.jpg" alt="张子豪">
+            <div class="overlay">张子豪</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=27868624" class="image-container">
+            <img src="./image/KnowKnow.jpg" alt="KnowKnow">
+            <div class="overlay">KNOW KNOW</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=35784564" class="image-container">
+            <img src="./image/danko.jfif" alt="弹壳">
+            <div class="overlay">弹壳</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=784257" class="image-container">
+            <img src="./image/Jony J.jpg" alt="JonyJ">
+            <div class="overlay">JONY J</div>
+        </a>
+        <!-- 更多歌手图片 -->
+    </div>
+    <!-- 返回主页按钮 -->
+<div class="back-to-home">
+    <a href="Home.html" class="button-style">返回主页</a>
+</div>
+    <script src="singer.js"></script> <!-- 链接外部JS文件 -->
+</body>
+</html>

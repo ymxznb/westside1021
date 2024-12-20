@@ -1,0 +1,159 @@
+/* 重置所有元素的默认内边距和外边距 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 设置背景视频的样式，使其覆盖整个页面 */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    object-fit: cover;
+}
+
+/* 搜索框容器样式 */
+.search-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 100px;
+    z-index: 10;
+}
+
+/* 搜索框输入框样式 */
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* 搜索按钮样式 */
+.search-container button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+/* 鼠标悬停时按钮样式变化 */
+.search-container button:hover {
+    background-color: #555;
+}
+
+/* 歌手图片列表样式 */
+.image-singer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 150px; /* 确保在搜索框下方 */
+    width: 100%; /* 宽度调整为100% */
+    max-width: 600px; /* 最大宽度限制 */
+    margin-left: auto;
+    margin-right: auto; /* 水平居中 */
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 单个歌手图片容器样式 */
+.image-container {
+    position: relative;
+    width: calc(33.333% - 10px);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* 歌手图片上的覆盖层样式 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+/* 鼠标悬停在歌手图片容器上时显示覆盖层 */
+.image-container:hover .overlay {
+    display: flex;
+    cursor: pointer;
+}
+
+/* 鼠标悬停时歌手图片容器的阴影效果 */
+.image-container:hover {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 媒体查询，适应不同屏幕尺寸 */
+@media (max-width: 768px) {
+    .image-container {
+        width: calc(50% - 10px); /* 在小屏幕上每行显示两个歌手图片 */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        width: 100%; /* 在非常小的屏幕上每行显示一个歌手图片 */
+    }
+}
+/* 放大效果的歌手图片容器样式 */
+.image-container.enlarged {
+    transform: scale(1.5); /* 放大1.5倍 */
+    z-index: 2; /* 确保放大的图片在最上层 */
+    transition: transform 0.3s ease-in-out; /* 平滑的放大效果 */
+}
+/* 返回主页按钮样式 */
+.back-to-home {
+    position: fixed; /* 固定位置 */
+    left: 20px; /* 距离左边20px */
+    bottom: 20px; /* 距离底部20px */
+    z-index: 1000; /* 确保按钮在最上层 */
+}
+
+.button-style {
+    padding: 10px 20px; /* 按钮内边距 */
+    background-color: #444; /* 按钮背景颜色 */
+    color: white; /* 文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    border-radius: 5px; /* 圆角边框 */
+    font-size: 16px; /* 字体大小 */
+    transition: background-color 0.3s; /* 背景颜色变化过渡效果 */
+}
+
+.button-style:hover {
+    background-color: #444; /* 鼠标悬停时的背景颜色 */
+}

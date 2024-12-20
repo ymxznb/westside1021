@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌手查找</title>
+    <link rel="stylesheet" type="text/css" href="singer.css"> <!-- 链接外部CSS文件 -->
+</head>
+<body>
+    <!-- 视频背景 -->
+    <video autoplay muted loop id="background-video"> <!-- 自动播放、静音、循环播放的视频 -->
+        <source src="./video/红白说唱hiphop舞台背景素材 (30)_爱给网_aigei_com.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+
+    <!-- 查找表单 -->
+    <div class="search-container">
+        <input type="text" id="singer-search" placeholder="输入歌手名称..."> <!-- 输入框 -->
+        <button type="button">查找</button> <!-- 搜索按钮 -->
+    </div>
+       <!-- 歌手图片列表 -->
+    <div class="image-singer">
+        <!-- 歌手图片链接 -->
+        <a href="https://music.163.com/#/artist?id=32665" class="image-container">
+            <img src="./image/eminemSinger.webp" alt="Eminem">
+            <div class="overlay">EMINEM</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=53243" class="image-container">
+            <img src="./image/Dr.dreSinger.png" alt="Dr. Dre">
+            <div class="overlay">DR. DRE</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=46399" class="image-container">
+            <img src="./image/50centSinger.png" alt="50 Cent">
+            <div class="overlay">50 CENT</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=129270" class="image-container">
+            <img src="./image/2pacSinger.jpg" alt="50 Cent">
+            <div class="overlay">2PAC</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=44276" class="image-container">
+            <img src="./image/biggeSinger.webp" alt="B.I.G">
+            <div class="overlay">B.I.G</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=42939" class="image-container">
+            <img src="./image/snoopdoggSinger.jpg" alt="SNOOP DOGG">
+            <div class="overlay">SNOOP DOGG</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=53283" class="image-container">
+            <img src="./image/deake (2).jpg" alt="deake">
+            <div class="overlay">DEAKE</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=35051" class="image-container">
+            <img src="./image/Ice-Cube.png" alt="Ice-Cube">
+            <div class="overlay">ICE-CUBE</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=35334" class="image-container">
+            <img src="./image/JAYZ.png" alt="JAYZ">
+            <div class="overlay">JAY-Z</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=37520" class="image-container">
+            <img src="./image/kanye-west.jpg" alt="kanye-west">
+            <div class="overlay">KANYE-WEST</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=40424" class="image-container">
+            <img src="./image/NAS.png" alt="NAS">
+            <div class="overlay">NAS</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=37995" class="image-container">
+            <img src="./image/Kendrick Lamar.jpg" alt="Kendrick Lamar">
+            <div class="overlay">KENDRICK LAMAR</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=38118" class="image-container">
+            <img src="./image/Lil Wayne.jpg" alt="lil wayne">
+            <div class="overlay">LIL WAYNE</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=31226" class="image-container">
+            <img src="./image/Puff Daddy.png" alt="Puff Daddy">
+            <div class="overlay">PUFF DADDY</div>
+        </a>
+        <a href="https://music.163.com/#/artist?id=35531" class="image-container">
+            <img src="./image/Justin Bieber.png" alt="Justin Bieber">
+            <div class="overlay">JUSTIN BIEBER</div>
+        </a>
+        <!-- 更多歌手图片 -->
+    </div>
+    <!-- 返回主页按钮 -->
+<div class="back-to-home">
+    <a href="Home.html" class="button-style">返回主页</a>
+</div>
+    <script src="singer.js"></script> <!-- 链接外部JS文件 -->
+</body>
+</html>

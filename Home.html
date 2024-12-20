@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="size.css">
+</head>
+<body>
+    <!-- 视频背景 -->
+    <video autoplay muted loop id="background-video">
+        <source src="./video/红白说唱hiphop舞台背景素材 (30)_爱给网_aigei_com.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+
+    <div id="navbar">
+        <!-- 用户信息区域 -->
+        <div id="user-info">
+            <img src="./image/touxiang.jpg" alt="Avatar" id="user-avatar">
+            <a href="login.html" class="button-style">登录</a>
+            <a href="register.html" class="button-style">注册</a>
+        </div>
+        <!-- 导航栏菜单 -->
+        <div id="nav-menu">
+            <ul>
+                <li><a href="Home.html" class="button-style">首页</a></li>
+                <li>
+                    <a href="javascript:void(0);" class="button-style">分类</a>
+                    <ul class="submenu">
+                        <li><a href="singers.html" class="button-style">国外歌手</a></li>
+                        <li><a href="songs.html" class="button-style">国内歌手</a></li>
+                        <li><a href="albums.html" class="button-style">歌曲查找</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button-style">歌手入驻</a></li>
+                <li>
+                    <a href="javascript:void(0);" class="button-style">技术支持</a>
+                    <ul class="submenu">
+                        <li><img src="./image/jishuzhic.jfif" alt="技术支持" class="support-img"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+   <!-- 新增按钮区域 -->
+<div id="extra-buttons" class="slide-in">
+    <a href="#">
+        <img src="./image/icons8-discord软件-160.png" alt="Singer Icon">
+    </a>
+    <a href="#">
+        <img src="./image/icons8-instagram-160.png" alt="Song Icon">
+    </a>
+    <a href="#">
+        <img src="./image/icons8-youtube上播放-160.png" alt="Album Icon">
+    </a>
+    <a href="#">
+        <img src="./image/LogosFacebook (1).svg" alt="Album Icon">
+    </a>
+</div>
+
+    <!-- Logo区域 -->
+    <div class="logo slide-in">
+        <img src="./image/west side.png" alt="Logo" id="logo">
+    </div>
+
+    <!-- Banner区域 -->
+    <div id="banner">
+        <div class="banner-item active" style="background-image: url('./image/2pac.jpg');">
+            <button class="banner-btn left">&lt;</button>
+            <button class="banner-btn right">&gt;</button>
+            <div class="banner-text">2Pac（1971年6月16日－1996年9月13日），美国非裔说唱歌手、演员和诗人，本名图派克·阿玛鲁·夏库尔（Tupac Amaru Shakur）。他以其深刻的歌词和对社会问题的探讨而闻名，是全球销量最高的说唱艺术家之一，唱片销量超过7500万张。</div>
+        </div>
+        <div class="banner-item" style="background-image: url('./image/bigge.jpg');">
+            <button class="banner-btn left">&lt;</button>
+            <button class="banner-btn right">&gt;</button>
+            <div class="banner-text">TThe Notorious B.I.G.，原名Christopher Wallace，艺名Biggie Smalls或Frank White，1972年5月21日出生于纽约布鲁克林。他是东海岸说唱的代表人物，以其深刻的歌词和流畅的Flow闻名。</div>
+        </div>
+        <div class="banner-item" style="background-image: url('./image/snoopydog.jpg');">
+            <button class="banner-btn left">&lt;</button>
+            <button class="banner-btn right">&gt;</button>
+            <div class="banner-text">Snoop Dogg，原名Calvin Cordozar Broadus Jr.，1971年10月20日出生于美国加州长滩，是美国著名的说唱歌手、演员和音乐制作人。他以其独特的西海岸嘻哈风格和悠闲的个性而闻名，是90年代gangsta rap的代表人物之一。</div>
+        </div>
+        <div class="banner-item" style="background-image: url('./image/R-C.jpg');">
+            <button class="banner-btn left">&lt;</button>
+            <button class="banner-btn right">&gt;</button>
+            <div class="banner-text">Eminem，本名Marshall Bruce Mathers III，是一位美国著名的说唱歌手、词曲作者和演员。以其快速的韵律、复杂的韵脚和富有争议的歌词而闻名，被认为是21世纪最伟大的说唱艺术家之一。</div>
+        </div>
+    </div>
+
+   <!-- 音乐播放器区域 -->
+<div class="music-player">
+    <div id="audioTitle">正在播放：暂无音乐</div>
+    <audio id="audioPlayer" controls>
+        <source src="" type="audio/mpeg">
+        您的浏览器不支持音频标签。
+    </audio>
+</div>
+
+    <!-- 页脚开始 -->
+    <footer class="footer slide-in">
+        <footer class="footer">
+            <div class="copyright">
+                &copy; 2025 此网站由MR.YOUNG，KLAY欧豪，_13联合制作
+            </div>
+        </footer>
+    </footer>
+    <!-- 页脚结束 -->
+    <script src="script.js"></script>
+</body>
+</html>

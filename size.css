@@ -1,0 +1,497 @@
+/* 基础样式 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 确保主内容区域至少有足够的高度 */
+#content {
+    min-height: calc(100vh - 60px); /* 60px是页脚的高度，根据实际情况调整 */
+    margin-left: 200px;
+    margin-top: 600px;
+    padding: 20px;
+    padding-bottom: 60px; /* 为页脚留出空间 */
+    display: flex;
+    flex-direction: column;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    left: -105px;
+}
+
+/* 导航栏样式 */
+#navbar {
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+/* 媒体查询：针对小屏幕设备 */
+@media (max-width: 768px) {
+    #navbar {
+        width: 100%; /* 全宽 */
+    }
+
+    #content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    #banner {
+        margin-left: 20px;
+        margin-top: 20px;
+        width: calc(100% - 40px);
+        height: calc(100vh - 40px);
+    }
+
+    .banner-item {
+        height: calc(100vh - 40px);
+    }
+}
+
+/* 更小屏幕 */
+@media (max-width: 480px) {
+    #navbar {
+        padding: 10px;
+    }
+
+    #logo {
+        width: 50%; /* 缩小Logo */
+    }
+
+    #extra-buttons {
+        left: 10px;
+        top: 85%;
+    }
+
+    #extra-buttons a {
+        margin-bottom: 5px;
+    }
+
+    #extra-buttons img {
+        width: 32px; /* 缩小图标 */
+        height: 32px;
+    }
+
+    .music-player {
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+        right: 0;
+    }
+}
+#navbar #user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* 在此处添加属性值 */
+}
+
+#user-info button {
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#user-info button:hover {
+    background-color: #555;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navbar li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#navbar li:hover {
+    background-color: #555;
+}
+
+#navbar .submenu {
+    display: none;
+    position: absolute;
+    left: 200px;
+    top: 180px;
+    background-color: #444;
+    z-index: 10;
+}
+
+#navbar .submenu li {
+    padding-left: 20px;
+}
+
+#navbar .submenu li a {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#navbar .submenu li a:hover {
+    background-color: #666;
+}
+
+#navbar li:hover > .submenu {
+    display: block;
+}
+#navbar ul li {
+    margin-bottom: 20px; /* 为每个列表项添加下边距 */
+}
+
+/* 如果是最后一个列表项，可能不需要下边距 */
+#navbar ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Logo样式 */
+.logo {
+    position: fixed;
+    top: 50px;
+    padding: 10px;
+    text-align: center;
+    left: 596px;
+    /* position: relative; */
+}
+
+#logo {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+/* Banner样式 */
+#banner {
+    margin-left: 375px;
+    margin-top: 178px;
+    width: 1000px;
+    height: 600px;
+    background-color: #add;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-item {
+    height: 660px;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* 主内容区域样式 */
+#content {
+    min-height: calc(100vh - 60px); /* 60px是页脚的高度，根据实际情况调整 */
+    margin-left: 200px;
+    margin-top: 600px;
+    padding: 20px;
+}
+
+#content button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.support-img {
+    width: 400px;
+    height: auto;
+}
+
+/* Banner按钮样式 */
+.banner-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.banner-btn.left {
+    left: 10px;
+}
+
+.banner-btn.right {
+    right: 10px;
+}
+
+.banner-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Banner文本样式 */
+.banner-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+#dd {
+    left: 350px;
+    position: relative;
+    top: -781px;
+}
+
+.footer {
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -100;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222;
+    color: white;
+}
+
+/* 定义滑动入场动画 */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 应用到特定元素 */
+.slide-in {
+    animation: slideIn 1s ease forwards;
+}
+
+/* 登录表单居中样式 */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* 根据实际需要调整宽度 */
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 阴影效果 */
+}
+
+/* 表单输入框和按钮样式 */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* 额外按钮区域样式 */
+#extra-buttons {
+    position: fixed;
+    left: 87px;
+    top: 67%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+#extra-buttons a {
+    display: block;
+    margin-bottom: 10px; /* 增加图标之间的间距 */
+    text-decoration: none; /* 去除下划线 */
+}
+
+#extra-buttons img {
+    width: 48px; /* 调整图标宽度 */
+    height: 48px; /* 调整图标高度 */
+    transition: transform 0.3s ease; /* 添加鼠标悬停时的变换效果 */
+}
+
+#extra-buttons img:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大图标 */
+}
+
+/* 通用按钮样式 */
+.button-style {
+    padding: 10px 20px; /* 增加水平padding，使按钮更宽 */
+    background-color: #444; /* 按钮背景色 */
+    color: #fff; /* 按钮文字颜色 */
+    border: none; /* 无边框 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 去除下划线 */
+    transition: background-color 0.3s; /* 背景色变化过渡效果 */
+    border-radius: 5px; /* 按钮圆角 */
+    margin-top: 10px; /* 上边距 */
+    margin-bottom: 10px; /* 下边距 */
+}
+
+.button-style:hover {
+    background-color: #555; /* 鼠标悬停时的背景色 */
+}
+
+/* 通用按钮样式 */
+.button-style {
+    padding: 10px 20px; /* 按钮内边距 */
+    background-color: #444; /* 按钮背景颜色 */
+    color: #fff; /* 按钮文字颜色 */
+    border: none; /* 无边框 */
+    cursor: pointer; /* 鼠标指针为手形 */
+    transition: background-color 0.3s; /* 背景色渐变效果 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 无下划线 */
+    border-radius: 5px; /* 圆角边框 */
+}
+
+/* 通用按钮样式 */
+.button-style {
+    padding: 10px 20px; /* 按钮内边距 */
+    background-color: #444; /* 按钮背景颜色 */
+    color: #fff; /* 按钮文字颜色 */
+    border: none; /* 无边框 */
+    cursor: pointer; /* 鼠标指针为手形 */
+    transition: background-color 0.3s; /* 背景色渐变效果 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 无下划线 */
+    border-radius: 5px; /* 圆角边框 */
+}
+
+/* 应用通用样式到所有按钮 */
+#user-info button,
+#navbar li button,
+#navbar .submenu li a,
+.login-container input[type="submit"] {
+    padding: 10px 20px; /* 按钮内边距 */
+    background-color: #444; /* 按钮背景颜色 */
+    color: #fff; /* 按钮文字颜色 */
+    border: none; /* 无边框 */
+    cursor: pointer; /* 鼠标指针为手形 */
+    transition: background-color 0.3s; /* 背景色渐变效果 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 无下划线 */
+    border-radius: 5px; /* 圆角边框 */
+}
+
+/* 按钮悬停效果 */
+#user-info button:hover,
+#navbar li button:hover,
+#navbar .submenu li a:hover,
+.login-container input[type="submit"]:hover {
+    background-color: #555; /* 鼠标悬停时的按钮背景颜色 */
+}
+/* 音乐播放器区域样式 */
+.music-player {
+    position: fixed; /* 固定位置 */
+    bottom: 20px; /* 距离底部20px */
+    right: 20px; /* 距离右侧20px */
+    width: 300px; /* 播放器宽度 */
+    height: 90px; /* 播放器高度 */
+    background-color: rgba(0, 0, 0, 0.8); /* 背景颜色，半透明 */
+    color: #fff; /* 文字颜色 */
+    padding: 10px;
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+    z-index: 1000; /* 确保播放器在其他元素之上 */
+}
+
+/* 播放器标题样式 */
+#audioTitle {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
